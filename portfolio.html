@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saad Shaikh | Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="portfoliocss.css" rel="stylesheet">
+    <script src="portjs.js"></script>
+
+
+</head>
+
+<body>
+    <div id="loginModal" class="custom-modal">
+        <div class="custom-modal-content">
+            <h2>Login Required</h2>
+            <p>Please login to see more features.</p>
+            <div class="modal-buttons">
+                <button onclick="promptLoginpage()">Login</button>
+                <button onclick="closeLoginModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginpage" class="custom-modal-login">
+        <div class="custom-modal-content">
+            <div class="modal-buttons">
+
+                <button onclick="closeLoginModalpage()">✕</button>
+            </div>
+            <div class="form-container">
+                <div class="form-box">
+                    <div class="form-icon">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </div>
+                    <h2>Welcome!</h2>
+                    <p>Sign in to your account</p>
+
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+
+                    <div class="form-options">
+                        <label><input type="checkbox"> remember me?</label>
+                        <a href="#">forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn primary">
+                        Login <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <header>
+
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login" onclick="promptLoginpage()" class="log">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="first-section">
+            <h1>Hi, I’m Saad Shaikh<br><span id="element"></span></h1>
+            <p>I’m a front-end developer crafting responsive, user-focused websites. I build elegant and functional web
+                experiences using HTML, CSS, JavaScript, and frameworks like React or Vue.</p>
+            <button class="harsh-btn-1" onclick="promptLoginpage(),promptLogin()"><span>Read more</span></button>
+        </section>
+
+        <section id="work" class="work-section">
+            <h1>My Work</h1>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal portfolio built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Hotel Booking App</h3>
+                    <p>Windows-based application for managing room bookings, developed using C# and SQL Server.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Logo Design Collection</h3>
+                    <p>Set of logos designed for various brands and events using modern design tools.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="service" class="second-section">
+            <h1>My Services</h1>
+            <div class="services-container">
+                <div class="card">
+                    <img src="frontendlogo.png" alt="Frontend Development">
+                    <h2>Web Development</h2>
+                    <p>Building fast, mobile-friendly websites tailored to your business needs using modern web
+                        technologies.</p>
+                    <a href="#">Read More</a>
+                </div>
+
+                <div class="card">
+                    <img src="mobile application.Default" alt="Frontend Development">
+                    <h2>App Development</h2>
+                    <p>Developing efficient Windows applications using C# and .NET, focused on performance and UX.</p>
+                    <a href="#">Read More</a>
+                </div>
+
+                <div class="card">
+                    <img src="logo_designing.png" alt="Frontend Development">
+                    <h2>Logo Design</h2>
+                    <p>Designing creative, brand-aligned logos that make a lasting impression and elevate your brand
+                        identity.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="hero">
+            <div class="container hero-content">
+                <div class="left">
+                    <p class="intro">I'm</p>
+                    <h1 class="name">Saad Shaikh</h1>
+                    <p class="tagline">A freelancer who provides services for digital programming and design content
+                        needs, for all businesses with more than 1 years of experience.</p>
+                    <div class="services">
+                        <h3>What Can I Do For Your Needs</h3>
+                        <p>It is easier to entrust the work to the experts because they are able to provide the best
+                            results with reliable quality.
+                            Let's build quality products in programming and design with my services</p>
+                    </div>
+                    <div class="social-iconss">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="saad prof_LE_upscale_balanced_x4 (1).png" alt="saad shaikh" />
+                </div>
+            </div>
+
+            <div class="brands">
+                <a href="#"><img src="https://img.icons8.com/color/48/meta.png" /></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/google-logo.png" /></a>
+                <a href="https://www.linkedin.com/in/saad-shaikh-developers/"><img
+                        src="https://img.icons8.com/color/48/linkedin.png" /></a>
+                <a href="#"><img src="https://img.icons8.com/color/48/slack-new.png" /></a>
+            </div>
+        </section>
+
+        <section class="services-section container">
+            <h2>What Can I Do For Your Needs</h2>
+            <p class="desc">It is easier to entrust the work to the experts because they are able to provide the best
+                results with reliable quality.</p>
+
+            <div class="stats">
+                <div><strong>250+</strong><br />Projects Completed</div>
+                <div><strong>100+</strong><br />Community Network</div>
+                <div><strong>10+</strong><br />Years Experience</div>
+            </div>
+
+            <div class="project-types">
+                <div class="box">
+                    <h3>UI/UX Design</h3>
+                    <p>117 Project</p>
+                </div>
+                <div class="box">
+                    <h3>Front End Develop</h3>
+                    <p>84 Project</p>
+                </div>
+                <div class="box">
+                    <h3>Mobile App Develop</h3>
+                    <p>26 Project</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- <p>a passionate front-end and application developer
+                            dedicated to building dynamic, user-friendly digital experiences. I specialize in creating
+                            responsive websites using HTML5, CSS3, JavaScript, and frameworks like React or Vue. I also
+                            develop Windows-based applications using C#, leveraging SQL Server for backend integration.
+                        </p>
+                        <p1>
+                            My focus is on blending design with functionality—ensuring clean UI/UX, fast loading speeds,
+                            and robust performance. I'm continuously exploring new technologies and best practices to
+                            elevate my skills and deliver professional-grade solutions.
+                        </p1>
+                        <p2>
+                            In my free time, I enjoy designing logos, exploring UI design trends, and contributing to
+                            open-source projects.
+                        </p2> -->
+
+
+
+        <section id="contact" class="third-section">
+            <h1>Get in Touch</h1>
+            <div class="contact-card">
+                <p>Want to work together or have a question?</p>
+                <p>Email me at <strong>saad@example.com</strong> or connect via social links below.</p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#service">Services</a>
+            <a href="#about">About Me</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p>&copy; 2025 Saad's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Frontend Developer.', 'C# Windows App Developer.', 'Creative Logo Designer.'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
