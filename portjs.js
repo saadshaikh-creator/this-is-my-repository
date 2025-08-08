@@ -11,9 +11,17 @@ function redirectToLogin() {
     window.location.href = "login.html"; // Change this if needed
 }
 
+function Signup() {
+    document.getElementById("loginpage").style.display = "none";
+    document.getElementById("Signuppage").style.display = "flex";
+}
+function closeSignupModal() {
+    document.getElementById("Signuppage").style.display = "none";
+}
 
 // ************************************
 function promptLoginpage() {
+    document.getElementById("loginModal").style.display = "none";
     document.getElementById("loginpage").style.display = "flex";
 }
 
@@ -38,4 +46,12 @@ function redirectToAboutme() {
 }
 function redirectToContact() {
     window.location.href = "file:///C:/Users/Saad/my%20port/portfolio.html#contact"; // Change this if needed
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+function signinpage() {
+    document.getElementById("Signuppage").style.display = "none";
+    document.getElementById("loginpage").style.display = "flex";
+
 }
