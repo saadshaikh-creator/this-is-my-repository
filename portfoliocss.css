@@ -44,7 +44,7 @@
  nav ul {
    list-style: none;
    display: flex;
-   gap: 25px;
+   gap: 20px;
  }
 
  nav a {
@@ -776,3 +776,4 @@
      transform: scale(1);
    }
  }
+
