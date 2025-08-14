@@ -1,9 +1,7 @@
- @font-face {
-   font-family: 'Bigmarker';
-   src: url('the_bigmaker/The Bigmaker PersonalUseOnly.ttf') format('truetype');
- }
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
 
- * {
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -27,36 +25,120 @@
    line-height: 1.6;
  }
 
- header {
-   background: #11122b;
-   padding: 10px 40px;
-   position: fixed;
-   top: 0;
-   width: 100%;
-   height: 70px;
-   z-index: 1000;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+ .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0d0f17;
+  padding: 10px 20px;
+  position: fixed; /* fixed at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 70px;
+  background: #11122b;
+}
 
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+.logo span {
+  color: #fff;
+}
 
- nav ul {
-   list-style: none;
-   display: flex;
-   gap: 20px;
- }
-
- nav a {
+.nav-links {
+  display: flex;
+   gap: 15px;
+}
+ 
+.nav-links a {
    text-decoration: none;
    color: white;
    font-weight: bold;
    transition: color 0.3s ease;
- }
-
- nav a:hover {
+}
+.nav-links a:hover {
    color: #ffcc00;
  }
+
+.search-container input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.nav-buttons {
+  color: white;
+   font-weight: bold;
+   transition: color 0.3s ease;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup {
+  color: lightblue;
+}
+
+.mobile-icons {
+  display: none;
+  gap: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #0d0f17;
+  padding: 20px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links, .search-container, .nav-buttons {
+    display: none;
+  }
+  .mobile-icons {
+    display: flex;
+  }
+}
 
  main {
    padding-top: 0px;
@@ -610,170 +692,112 @@
  /* login and signup pages css  */
 
 
- .form-container {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+.form-container {
+    position: relative;
+    top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
 
-   padding: 0px;
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-   animation: fadeIn 0.3s ease-in-out;
- }
+.form-box {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
 
- .close-button {
-   margin: -11px;
+.form-icon i {
+  font-size: 32px;
+  color: #3a57e8;
+  margin-bottom: 10px;
+}
 
- }
+.form-box h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #222;
+}
 
- .close-button a {
-   position: relative;
-   top: 21px;
-   left: 145px;
-   color: grey;
-   text-decoration: none;
+.form-box p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #666;
+}
 
- }
+.form-box label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #444;
+}
 
- .form-box {
-   background: #fff;
-   padding: 40px 40px;
-   border-radius: 12px;
-   width: 100%;
-   max-width: 350px;
-   /* box-shadow: 0 5px 25px rgba(0,0,0,0.1); */
-   text-align: center;
- }
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
 
- .form-icon i {
-   font-size: 32px;
-   color: #3a57e8;
-   margin-bottom: 10px;
- }
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
 
- .form-box h2 {
-   font-size: 24px;
-   font-weight: 700;
-   margin-bottom: 5px;
-   color: #222;
- }
+.form-options a {
+  color: #3a57e8;
+  text-decoration: none;
+}
 
- .form-box p {
-   font-size: 14px;
-   margin-bottom: 20px;
-   color: #666;
- }
+.btn.primary {
+  background-color: #3a57e8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
- .form-box label {
-   display: block;
-   text-align: left;
-   margin-bottom: 5px;
-   font-size: 14px;
-   color: #444;
- }
+.btn.primary i {
+  margin-left: 5px;
+}
 
- .form-box input {
-   width: 100%;
-   padding: 10px;
-   border: 1px solid #ddd;
-   border-radius: 6px;
-   margin-bottom: 15px;
-   font-size: 14px;
- }
+.btn.primary:hover {
+  background-color: #2f47c5;
+}
 
- .form-optionss {
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   font-size: 13px;
-   margin-bottom: 20px;
- }
+.social-text {
+  font-size: 14px;
+  margin: 20px 0 10px;
+  color: #666;
+}
 
- .form-optionss a {
-   color: #3a57e8;
-   text-decoration: none;
- }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
- .form-optionss label {
-   position: relative;
-   top: 20px;
-   left: -77px;
+.social-icons a {
+  font-size: 18px;
+  color: #3a57e8;
+  transition: color 0.2s;
+}
 
-   text-decoration: none;
- }
-
- .form-buttons {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   flex-wrap: nowrap;
-   align-content: center;
-   gap: 40px;
- }
-
- .form-buttons a {
-   position: relative;
-   left: 0px;
-   justify-content: center;
-   align-items: center;
-   align-content: center;
-   text-decoration: underline;
-   color: #3a57e8;
-
- }
-
- .btn.primary {
-   background-color: #3a57e8;
-   color: white;
-   padding: 10px 20px;
-   border: none;
-   border-radius: 6px;
-   font-size: 15px;
-   font-weight: 600;
-   cursor: pointer;
-   transition: background 0.3s ease;
- }
-
- .btn.primary i {
-   margin-left: 5px;
- }
-
- .btn.primary:hover {
-   background-color: #2f47c5;
- }
-
- .social-text {
-   font-size: 14px;
-   margin: 20px 0 10px;
-   color: #666;
- }
-
- .social-icons {
-   display: flex;
-   justify-content: center;
-   gap: 20px;
- }
-
- .social-icons a {
-   font-size: 18px;
-   color: #3a57e8;
-   transition: color 0.2s;
- }
-
- .social-icons a:hover {
-   color: #222;
- }
-
- @keyframes fadeIn {
-   from {
-     opacity: 0;
-     transform: scale(0.9);
-   }
-
-   to {
-     opacity: 1;
-     transform: scale(1);
-   }
- }
-
+.social-icons a:hover {
+  color: #222;
+}
