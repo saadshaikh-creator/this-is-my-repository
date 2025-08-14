@@ -7,10 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saad Shaikh | Developer Portfolio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  
+    
     <link href="portfoliocss.css" rel="stylesheet">
     <script src="portjs.js"></script>
 
@@ -28,7 +26,7 @@
             </div>
         </div>
     </div>
-    <!-- loginnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn -->
+    <!-- loginnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
     <div id="loginpage" class="custom-modal-login">
 
 
@@ -58,7 +56,7 @@
                     <button type="submit" class="btn primary">
                         Login <i class="fas fa-arrow-right"></i>
                     </button>
-                    <p>Don't have an account?<a href="#" onclick="Signup()">Sign up</a></p>
+                    <p>Don't have an account?<a href="#Signup" onclick="Signup()">Sign up</a></p>
                 </div>
                 <div class="social-text">Or create account using social media!</div>
                 <div class="social-icons">
@@ -72,35 +70,35 @@
 
 
 
-    </div>
+    </div> -->
     <!-- signupppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp -->
-    <div id="Signuppage" class="custom-modal-login">
+    <!-- <div id="Signuppage" class="custom-modal-login">
 
 
         <div class="form-container">
             <div class="close-button">
                 <a href="#" onclick="closeSignupModal()">✕</a>
             </div>
-            <form class="form-box">
+            <form class="form-box" >
                 <div class="form-icon">
                     <i class="fas fa-user-circle"></i>
                 </div>
                 <h2>Create account!</h2>
 
                 <label>Name</label>
-                <input type="text" placeholder="Enter your name" required>
+                <input type="text" placeholder="Enter your name"  required>
 
                 <label>E-mail</label>
-                <input type="email" placeholder="Enter your email" required>
+                <input type="email" placeholder="Enter your email"  required>
 
                 <label>Password</label>
-                <input type="password" placeholder="Create a password" required>
+                <input type="password" placeholder="Create a password"  required>
 
                 <div class="form-buttons">
-                    <button type="submit" class="btn primary">
+                    <button type="submit" value="submit" class="btn primary">
                         Create <i class="fas fa-arrow-right"></i>
                     </button>
-                    <p>Already have an account.<a href="#" onclick="signinpage()">Sign-in</a></p>
+                    <p>Already have an account.<a href="#Sign-in" onclick="signinpage()">Sign-in</a></p>
                 </div>
                 <div class="social-text">Or create account using social media!</div>
                 <div class="social-icons">
@@ -112,21 +110,59 @@
 
 
         </div>
-    </div>
-    <header>
+    </div> -->
+<header class="navbar">
+  <div class="logo"> &lt;/&gt;<span>CodeWithHarry</span> </div>
+
+  <!-- Desktop Menu -->
+  <nav class="nav-links">
+<a href="#home">Home</a>
+  <a href="#service">Services</a>
+  <a href="#about">About Me</a>
+  <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input type="text" placeholder="Search...">
+    <span class="search-icon">🔍</span>
+  </div>
+
+  <!-- Buttons -->
+  <div class="nav-buttons">
+    <button class="btn"><a href="login.html" onclick="" >Login</a></button>
+    <button class="btn signup"><a href="signup.html" onclick="" >Signup</a></button>
+    <button class="btn dark-mode">🌙</button>
+  </div>
+
+  <!-- Mobile Icons -->
+  <div class="mobile-icons">
+    <span class="search-icon">🔍</span>
+    <span class="menu-icon" id="menuBtn">☰</span>
+  </div>
+
+  <!-- Mobile Sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <span>CodeWithHarry</span>
+    <span id="closeSidebar">✖</span>
+  </div>
+  <a href="#home">Home</a>
+  <a href="#service">Services</a>
+  <a href="#about">About Me</a>
+  <a href="#contact">Contact</a>
+  
+  <div class="sidebar-buttons">
+    <button class="btn">Login</button>
+    <button class="btn signup">Signup</button>
+    <button class="btn dark-mode">🌙</button>
+  </div>
+</div>
+</header>
 
 
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#login" onclick="promptLoginpage()" class="log">Login</a></li>
-            </ul>
-        </nav>
-    </header>
 
+    
     <main>
         <section id="home" class="first-section">
             <h1>Hi, I’m Saad Shaikh<br><span id="element"></span></h1>
@@ -288,10 +324,14 @@
             backSpeed: 25,
             loop: true
         });
+          document.getElementById("menuBtn").addEventListener("click", () => {
+  document.getElementById("sidebar").style.right = "0";
+});
+
+document.getElementById("closeSidebar").addEventListener("click", () => {
+  document.getElementById("sidebar").style.right = "-250px";
+});
     </script>
 </body>
 
 </html>
-
-
-
